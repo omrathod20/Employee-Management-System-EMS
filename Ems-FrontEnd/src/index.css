@@ -1,0 +1,100 @@
+/* Remove browser default spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Hero animations */
+.hero-text {
+  animation: slideIn 1s ease-out forwards;
+}
+
+.hero-buttons {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: black;
+  transition: 0.3s;
+}
+/* index.css */
+
+.loader-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen */
+  background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Loader animation */
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-page p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  animation: fadeIn 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
